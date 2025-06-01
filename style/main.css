@@ -1,6 +1,6 @@
 .container_menu {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 30px;
+  font-size: 55px;
   font-weight: bold;
   text-align: center;
   padding: 30px;
@@ -53,6 +53,11 @@
 
 .titulo_equipamento {
   text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  font-size: 24px; /* ou 28px se quiser ainda mais destaque */
+  letter-spacing: 1px; /* opcional: espaçamento entre letras */
+  margin: 20px 0; /* espaço acima e abaixo */
 }
 
 .container_equipamentos {
@@ -130,26 +135,92 @@
   }
 }
 
-.rodape {
-  background-color: #0077ff;
-  padding: 15px;
-}
-
+/* relatos*/
 .titulo_relatos {
   text-align: center;
   padding: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .container_relatos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 14px;
+  gap: 20px;
+  padding: 20px;
 }
 
-.container_relatos img {
+.relato_usuario {
+  display: flex;
+}
+
+.card-relato {
+  width: 220px;
+  min-height: 380px; /* altura mínima para uniformizar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card-relato img {
   width: 100%;
-  height: auto;
-  display: block;
-  padding: 15px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-relato img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-relato h3 {
+  margin: 10px 0 5px 0;
+  font-size: 16px;
+}
+
+.card-relato p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 5px 10px; /* espaço lateral pro texto respirar */
+}
+
+/*rodape */
+
+.icones-rodape {
+  display: flex;
+  justify-content: flex-end; /* Alinha à direita */
+  align-items: center; /* Alinha verticalmente */
+  gap: 10px; /* Espaçamento entre os itens */
+  width: 100%; /* Garante que ocupe toda a largura */
+}
+
+.rodape {
+  background-color: #0077ff; /* cor de fundo escura */
+  color: #ffffff; /* cor do texto principal */
+  text-align: center;
+  padding: 20px 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 23px;
+}
+
+.descricao-rodape {
+  color: #4caf50; /* verde para destacar o nome */
+  font-weight: bold;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.descricao-rodape:hover {
+  color: #81c784; /* tom mais claro ao passar o mouse */
 }
